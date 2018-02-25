@@ -14,6 +14,16 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+// function pyramid(n) {}
+
+function pyramid(n) {
+  let i = 1
+  while (i <= n) {
+    let stair = ' '
+    stair = ' '.repeat(n - i) + '#'.repeat(2 * i - 1) + ' '.repeat(n - i)
+    console.log(stair)
+    i++
+  }
+}
 
 module.exports = pyramid;
