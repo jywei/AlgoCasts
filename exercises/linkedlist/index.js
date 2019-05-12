@@ -82,6 +82,9 @@ class LinkedList {
   }
 
   insertLast(data) {
+    if (this.head == null) {
+      this.insertFirst(data);
+    }
     this.getLast().next = new Node(data, null);
   }
 }
