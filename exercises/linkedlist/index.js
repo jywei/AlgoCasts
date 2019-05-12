@@ -53,8 +53,11 @@ class LinkedList {
   }
 
   removeFirst() {
-    let newNode = this.getFirst().next;
-    this.head = newNode;
+    if (!this.head) {
+      return;
+    }
+
+    this.head = this.head.next;
   }
 }
 
