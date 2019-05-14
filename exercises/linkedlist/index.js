@@ -14,8 +14,11 @@ class LinkedList {
     this.head = null;
   }
 
+  // insertFirst(data) {
+  //   this.head = new Node(data, this.head);
+  // }
   insertFirst(data) {
-    this.head = new Node(data, this.head);
+    this.insertAt(data, 0);
   }
 
   size() {
@@ -29,23 +32,29 @@ class LinkedList {
     return counter;
   }
 
+  // getFirst() {
+  //   return this.head;
+  // }
   getFirst() {
-    return this.head;
+    return this.getAt(0);
   }
 
+  // getLast() {
+  //   let node = this.head;
+
+  //   if (!node) {
+  //     return null;
+  //   }
+
+  //   while (node) {
+  //     if (!node.next) {
+  //       return node;
+  //     }
+  //     node = node.next;
+  //   }
+  // }
   getLast() {
-    let node = this.head;
-
-    if (!node) {
-      return null;
-    }
-
-    while (node) {
-      if (!node.next) {
-        return node;
-      }
-      node = node.next;
-    }
+    return this.getAt(this.size() - 1);
   }
 
   clear() {
